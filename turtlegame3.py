@@ -5,7 +5,7 @@ import random
 import os
 import time
 
-#Set up screen
+# Set up screen
 turtle.setup(650,650)
 wn = turtle.Screen()
 wn.bgcolor('seagreen')
@@ -30,7 +30,7 @@ player.shape('turtle')
 player.penup()
 player.speed(0)
 
-#Create opponent turtle
+# Create comp opponent turtle
 comp = turtle.Turtle()
 comp.color('lightpink')
 comp.shape('turtle')
@@ -64,7 +64,7 @@ speed = 1
 # Set game time limit 
 timeout = time.time() + 10*6
 
-#Define functions
+# Define functions
 def turn_left():
     player.left(30)
 
@@ -87,7 +87,7 @@ def isCollision(t1, t2):
         return False
     
 
-#Set keyboard binding
+# Set keyboard binding
 turtle.listen()
 turtle.onkey(turn_left, 'Left')
 turtle.onkey(turn_right, 'Right')
@@ -102,22 +102,22 @@ while True:
 
     player.forward(speed)
     comp.forward(12)
-    # Boundary Comp Checking x coordinate
+    # Boundary comp checking x coordinate
     if comp.xcor() > 290 or comp.xcor() < -290:
         comp.right(180)
         os.system('afplay bounce.mp3&')
 
-    # Boundary Comp Checking y coordinate
+    # Boundary comp checking y coordinate
     if comp.ycor() > 290 or comp.ycor() < -290:
         comp.right(180)
         os.system('afplay bounce.mp3&')
 
-    # Boundary Player Checking x coordinate
+    # Boundary player checking x coordinate
     if player.xcor() > 290 or player.xcor() < -290:
         player.right(180)
         os.system('afplay bounce.mp3&')
 
-    # Boundary Player Checking y coordinate
+    # Boundary player checking y coordinate
     if player.ycor() > 290 or player.ycor() < -290:
         player.right(180)
         os.system('afplay bounce.mp3&')
@@ -127,12 +127,12 @@ while True:
     for food in foods:
         food.forward(3) 
         
-        # Boundary Food Checking x coordinate
+        # Boundary food checking x coordinate
         if food.xcor() > 290 or food.xcor() < -290:
             food.right(180)
             os.system('afplay bounce.mp3&')
 
-        # Boundary Food Checking y coordinate
+        # Boundary food checking y coordinate
         if food.ycor() > 290 or food.ycor() < -290:
             food.right(180)
             os.system('afplay bounce.mp3&')
@@ -151,7 +151,7 @@ while True:
             scorestring ="Score: %s" % score
             mypen.write(scorestring, False, align='left', font=('Arial', 14, 'normal'))
 
-        # Comp Collision checking
+        # Comp collision checking
         if isCollision(comp, food):
             food.setposition(random.randint(-290, 290), random.randint (-290, 290))
             food.right(random.randint(0, 360))
