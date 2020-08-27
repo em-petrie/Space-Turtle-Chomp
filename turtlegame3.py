@@ -8,7 +8,7 @@ import time
 # Set up screen
 turtle.setup(650,650)
 wn = turtle.Screen()
-wn.bgcolor('seagreen')
+wn.bgcolor('darkslategray')
 wn.tracer(3)
 wn.bgpic('kbgame-bg.gif')
 
@@ -32,14 +32,14 @@ player.speed(0)
 
 # Create comp opponent turtle
 comp = turtle.Turtle()
-comp.color('lightpink')
+comp.color('lawngreen')
 comp.shape('turtle')
 comp.penup()
 comp.setposition(random.randint(-290, 290), random.randint(-290, 290))
 
 # Create competition score
 mypen2 = turtle.Turtle()
-mypen2.color('lightpink')
+mypen2.color('lawngreen')
 mypen2.hideturtle()
 
 # Create variable score
