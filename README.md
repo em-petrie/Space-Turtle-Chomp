@@ -1,2 +1,2 @@
 # Space Turtle Chomp
-A beginner-friendly python project using the turtle module.
+A fairly beginner-friendly python project using turtle graphics.
