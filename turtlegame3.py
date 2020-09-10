@@ -86,7 +86,6 @@ def isCollision(t1, t2):
     else:
         return False
     
-
 # Set keyboard binding
 turtle.listen()
 turtle.onkey(turn_left, 'Left')
@@ -122,7 +121,6 @@ while True:
         player.right(180)
         os.system('afplay bounce.mp3&')
 
-    
     # Move food around
     for food in foods:
         food.forward(3) 
@@ -143,6 +141,7 @@ while True:
             food.right(random.randint(0, 360))
             os.system('afplay chomp.mp3&')
             score +=1
+            
             #Draw the score on the screen
             mypen.undo()
             mypen.penup()
@@ -157,6 +156,7 @@ while True:
             food.right(random.randint(0, 360))
             os.system('afplay chomp.mp3&')
             comp_score +=1
+            
             # Draw the comp score on the screen
             mypen2.undo()
             mypen2.penup()
